@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/enr7rrk.css">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CUSTOM SCRIPTS -->
+    <script src="obfuscated-scripts.js" defer></script>
+</head>
+
+<body>
+
+    <article>
+
+        <header>
+
+            <div>
+                <img id="decorative" src="images/design.png" alt="A delicate decorative element">
+                <H1> Charlie's Cat Cafe </H1>
+                <nav>
+                    <a href="#switcherSection">Adoptable Cats</a>
+                    <a href="#randomNumSection">Special Offers</a>
+                    <a href="#userRegistrationSection">Contact</a>
+                </nav>
+            </div>
+
+            <button id="modeSwitchBtn">Dark/light mode</button>
+        </header>
+
+        <section id=sec1>
+
+            <img src="images/header-image.jpg" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
+            <div>
+                <img id="decorative" src="images/design.png" alt="A delicate decorative element">
+                <h2>Welcome to Charlie's!</h2>
+                <p>Grab a cozy cup of coffee or tea and spend time with our charming rescue cats at Charlie’s. We're more than a café — we're a home between homes for cats waiting for their forever families. Each month, meet three adoptable stars in our Three-Cat Spotlight from local shelter partners.</p>
+            </div>
+        </section>
+
+        <section id="switcherSection">
+            <div>
+                <h2>Adoptable Cats</h2>
+            </div>
+            <section id="switcherButtons">
+                <button id="btn1">Meet Luna</button>
+                <button id="btn2">Meet Mochi</button>
+                <button id="btn3">Meet Chai</button>
+            </section>
+
+            <section id="catInfoSection">
+                <section id="product1" class="currentItem">
+                    <img src="images/cat-1.png"
+                        alt="A black and white cat sitting tall on a rug in the sunlight">
+                    <h3>Meet Luna</h3>
+                    <p>This graceful 3-year-old tuxedo cat is equal parts elegant and silly. Luna loves window sunbathing
+                        and will politely chirp when she wants attention. She’s gentle, affectionate, and great with kids —
+                        the perfect lap companion for a calm household.</p>
+                </section>
+    
+                <section id="product2" class="hiddenItem">
+                    <img src="images/cat-2.png"
+                        alt="An orange kitten strutting playfully with a toy in its mouth">
+                    <h3>Meet Mochi</h3>
+                    <p>Mochi is a playful orange tabby kitten with a curious spirit and boundless energy. At just 5 months
+                        old, he’s already mastered the art of stealing hearts (and the occasional muffin crumb). Mochi would
+                        thrive in an active home where playtime and cuddles are always on the menu.</p>
+                </section>
+    
+                <section id="product3" class="hiddenItem">
+                    <img src="images/cat-3 .png"
+                        alt="A fluffy grey cat sleeping peacefully on a couch">
+                    <h3>Meet Chai</h3>
+                    <p>Chai, a soft grey senior cat with big green eyes, is all about quiet companionship. She’s calm,
+                        loving, and a big fan of naps near warm mugs. If you’re looking for a mellow best friend to share
+                        peaceful mornings with, Chai might just be your perfect match.</p>
+                </section>
+
+            </section>
+        </section>
+
+        </section>
+
+        <section id="randomNumSection">
+            <div>
+                <img id="decorative" src="images/design.png" alt="A delicate decorative element">
+                <h2>Try your luck and get 50% off!</h2>
+            </div>
+            <p>Pick a number 1-10, and recieve a promo code for 50% off your next order if you guess correctly!</p>
+            <form id="randomNumForm">
+                <label for="inputNum"><strong>Your guess:</strong></label>
+                <input type="number" name="inputNum" id="inputNum">
+
+                <p id="numError" class="hidden">Oops! Choose between 1 and 10</p>
+                <input type="submit" id="numSubmit">
+            </form>
+
+            <p id="randomNumberMessage"></p>
+
+        </section>
+        
+        <section id="userRegistrationSection">
+
+            <h1>Get in touch!</h1>
+
+            <form id="userRegistrationForm">
+
+                <!--Full Name-->
+                
+                <div>
+                    <label for="fullName">Full Name:<span class="required">*</span></label>
+                    <input type="text" name="fullName" id="fullName">
+                    <p class="hidden">Full name must include valid characters</p>
+
+                </div>
+                
+                <!--Phone-->
+                <div>
+                    <label for="phone">Phone Number:<span class="required">*</span></label>
+                    <input type="phone" name="phone" id="phone">
+                    <p class="hidden">Please enter a valid phone number</p>
+
+                </div>
+                
+                <!--Email-->
+                <div>
+                    <label for="email">Email Address:<span class="required">*</span></label>
+                    <input type="email" name="email" id="email">
+                    <p class="hidden">Please enter a valid email address</p>
+
+                </div>
+                
+
+                <!--Comments-->
+                <div>
+                    <label for="comments">Comments:<span class="required">*</span></label>
+                    <input type="text" name="comments" id="comments">
+                    <p class="hidden">Please enter comments</p>
+
+                </div>
+                
+
+                <!--Preferred contact-->
+                <div>
+                    <fieldset>
+                        <legend>Preferred contact method <span class="required">*</span></legend>
+                        <label for="phoneRadio" class="radio">
+                            <span class="radio_input">
+                            <input type="radio" name="preferredContact" id="phoneRadio" value="phoneRadio" required checked>
+                            <span class="radio_control"></span>
+                            </span>
+                            <span class="radio_label">Phone</span>
+                        </label>
+                        <label for="emailRadio" class="radio">
+                            <span class="radio_input">
+                            <input type="radio" name="preferredContact" id="emailRadio" value="emailRadio">
+                            <span class="radio_control"></span>
+                            </span>
+                            <span class="radio_label">Email</span>
+                        </label>
+                        </fieldset>
+                        <p id="preferredContact" class="hidden"></p>
+
+                </div>
+
+                <input type="submit" id="formSubmitBtn" value="Submit">
+            </form>
+            <p id="confirm" class="hidden"></p>
+
+        </section>
+
+        </main>
+        <footer>
+            <p>For Educational Purposes Only</p>
+            <p>Copyright &copy; <span>2025</span> GIT417 - Emma Pivin</p>
+        </footer>
+
+    </article>
+
+</body>
+
+</html>
